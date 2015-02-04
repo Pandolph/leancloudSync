@@ -8,8 +8,8 @@
 
 
 #import "AppDelegate.h"
-#import "DetailViewController.h"
-
+#import <AVOSCloud/AVOSCloud.h>
+#import "ProductObject.h"
 
 @interface AppDelegate ()
 
@@ -18,10 +18,13 @@
 @implementation AppDelegate
 
 
-
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [ProductObject registerSubclass];
+    [AVOSCloud setApplicationId:@"gedw1wvws2o9ug4hw5le8vtvvsxfkuwifdoq6sth076foqad"
+                      clientKey:@"cuyi7usleixbpe5ai5wddyoqt50qjy1xehp8l1ttn27ehlg4"];
+
+
     return YES;
 }
 
